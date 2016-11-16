@@ -1,0 +1,732 @@
+@charset "utf-8";
+/* =============================================================================
+   BASIC
+   ========================================================================== */
+html, body { margin:0px; padding:0px; height:100%; }
+body, th, td, input { font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; font-size:14px; line-height: 120%; }
+a{ text-decoration: none;}
+b{ font-weight:normal;}
+p{ line-height:2em; margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6{ font-weight:400;}
+h1{ font-size:40px; font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; }
+h2{ font-size:26px; font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; line-height: 180%; }
+h3{ font-size:18px; font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; line-height: 120%; font-weight:bold; }
+h4{ font-size:16px; font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; font-weight:bolder; line-height:0;}
+h5{ font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; }
+h6{ font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; }
+a:link, a:visited { text-decoration:none; cursor:pointer; }
+table,th,td { margin:0; padding:0; border:none; outline:none; border-collapse:collapse; border-spacing:0; }
+body {
+	background:#e70012;
+}
+a:visited {
+	font-size: 100%;
+	color:#F00;
+	text-decoration:none;
+}
+a:link {
+	font-size: 100%;
+	color:#F00;
+	text-decoration:none;
+}
+a:hover {
+	font-size: 100%;
+	color:#000;
+	text-decoration:underline;
+}
+/*----------------- Font --------------------*/
+.word-red {
+	font-size:100%;
+	color:#ff0000;
+}
+.word-big-blue {
+	font-size:125%;
+	color:#03C;
+	font-weight:bolder;
+	line-height: 140%;
+}
+/*----------------- 最外層包裝 --------------------*/
+#bg-index{
+	width:100%;
+	background:url(images/index-bg.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-color:#fff7c8;
+	float:left;
+}
+#bg-in{
+	width:100%;
+	background:url(images/in-bg.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-color:#ffecb4;
+	float:left;
+}
+#wrapper {
+	width: 1024px;
+	position:relative;
+	text-align:left;
+}
+/*----------------- index --------------------*/
+#index{
+	width:1024px;
+	float:left;
+}
+#index-p{
+	display:none;
+}
+#btn-go {
+	position: absolute;
+	width: 178px;
+	z-index: 1;
+	left: 610px;
+	top: 400px;
+}
+#btn-index {
+	position: absolute;
+	width: 486px;
+	z-index: 1;
+	left: 90px;
+	top: 505px;
+}
+#btn-index ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#btn-index li {
+	width:25;
+	list-style-type:none;
+	float:left;
+}
+/*----------------- in --------------------*/
+#banner{
+	width:100%;
+	float:left;
+}
+#banner img{
+	width:100%;
+}
+#banner-p{
+	display:none;
+}
+#btn-in {
+	position: absolute;
+	width: 486px;
+	z-index: 1;
+	left: 530px;
+	top: 52px;
+}
+#btn-in ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#btn-in li {
+	width:25%;
+	list-style-type:none;
+	float:left;
+}
+#game{
+	width:100%;
+	float:left;
+}
+#game img{
+	width:100%;
+}
+#game-pad{
+	display:none;
+}
+#game-prize{
+	width:100%;
+	height:600px;
+	float:left;
+	background:url(images/game-bg-prize.gif);
+	background-position:bottom center;
+	background-repeat:no-repeat;
+	background-color:#fff8e3;
+}
+/*----------------- game --------------------*/
+#draggable {
+	width:12%;
+	float: left;
+	position: absolute;
+	top: 183px;
+	z-index: 999;
+	left: 38px;
+}
+#draggable img {
+	width:100%;
+}
+#droppable-1 {
+	width:18%;
+	float:left;
+	margin-left:20%;
+	margin-top:40%;
+	position:absolute;
+}
+#droppable-1 img {
+	width:100%;
+}
+#droppable-2 {
+	width:18%;
+	float:left;
+	margin-left:40%;
+	margin-top:40%;
+	position:absolute;
+}
+#droppable-2 img {
+	width:100%;
+}
+#droppable-3 {
+	width:18%;
+	float:left;
+	margin-left:60%;
+	margin-top:40%;
+	position:absolute;
+}
+#droppable-3 img {
+	width:100%;
+}
+#box {
+	position: absolute;
+	width: 200px;
+	z-index: 1;
+	left: 774px;
+	top: 212px;
+	border: 1px #CCCCCC solid;
+	border-radius: 15px;
+	padding: 10px 10px 10px 10px;
+	visibility: visible;
+}
+/*-----------------MENU_手機板選單--------------------*/
+#m_top_menu { display:none; }
+#top_menu { display:none; }
+/*----------------- footer --------------------*/
+#footer{
+	width:100%;
+	clear:both;
+	float:left;
+	background:#e70012;
+	text-align:center;
+	z-index:500;
+}
+/*----------------- updown --------------------*/
+#envelope-words {
+	position: absolute;
+	width:50%;
+	z-index: 1;
+	margin-left:8%;
+	margin-top:30%;
+}
+#envelope-words p.a {
+	font-size:4.5em;
+	font-weight:bolder;
+	line-height:120%;
+	text-align:center;
+}
+#envelope-words p.b {
+	font-size:7em;
+	font-weight:bolder;
+	color:#F00;
+	text-align:center;
+	line-height:120%;
+}
+#envelope-words p.c {
+	font-size:1.4em;
+	margin-top:20px;
+	line-height:150%;
+}
+#envelope-01 {
+	position: absolute;
+	width: 275px;
+	z-index: 1;
+	left: 626px;
+	top: 404px;
+}
+#envelope-01 img {
+	width:100%;
+}
+#envelope-02 {
+	position: absolute;
+	width: 275px;
+	z-index: 10;
+	left: 626px;
+	top: 404px;
+}
+#envelope-02 img {
+	width:100%;
+}
+#envelope-03 {
+	position: absolute;
+	width: 215px;
+	z-index: 5;
+	left: 650px;
+	animation: Updown 2s infinite alternate;
+	-webkit-animation: Updown 2s alternate infinite;
+}
+#envelope-03 img {
+	width:100%;
+}
+
+
+/*平板-1*/
+@media only screen and (max-width:1000px) {
+/*----------------- content --------------------*/
+#wrapper {
+	width: 100%;
+}
+/*----------------- index --------------------*/
+#index{
+	width:100%;
+	float:left;
+}
+#index img{
+	width:100%;
+}
+#btn-go {
+	width:15%;
+	left:60%;
+	top:auto;
+	margin-top:40%;
+}
+#btn-go img {
+	width:100%;
+}
+#btn-index {
+	width:35%;
+	left:7%;
+	top:auto;
+	margin-top:48%;
+}
+#btn-index li img {
+	width:100%;
+}
+/*----------------- in --------------------*/
+#btn-in {
+	width:50%;
+	left:50%;
+}
+#btn-in li img {
+	width:100%;
+}
+#game{
+	display:none;
+}
+#game-pad{
+	display:block;
+	width:100%;
+	float:left;
+	height:550px;
+	background:url(images/game-bg-pad.jpg);
+	background-position:bottom center;
+	background-color:#FFF;
+}
+#game-prize{
+	width:100%;
+	height:550px;
+	float:left;
+	background:url(images/game-bg-prize.gif);
+	background-position:bottom center;
+	background-repeat:no-repeat;
+	background-color:#fff8e3;
+}
+/*----------------- game --------------------*/
+#draggable {
+	width:10%;
+	float: left;
+	position: absolute;
+	top: 163px;
+	z-index: 999;
+	left: 38px;
+}
+#droppable-1 {
+	width:20%;
+	float:left;
+	margin-left:15%;
+	margin-top:40%;
+	position:absolute;
+}
+#droppable-2 {
+	width:20%;
+	float:left;
+	margin-left:40%;
+	margin-top:40%;
+	position:absolute;
+}
+#droppable-3 {
+	width:20%;
+	float:left;
+	margin-left:65%;
+	margin-top:40%;
+	position:absolute;
+}
+#box {
+	width:30%;
+	left:auto;
+	right:5%;
+	top:180px;
+}
+/*----------------- footer --------------------*/
+#footer img{
+	width:100%;
+}
+/*----------------- updown --------------------*/
+#envelope-words {
+	position: absolute;
+	width:50%;
+	z-index: 1;
+	margin-left:8%;
+	margin-top:30%;
+}
+#envelope-words p.a {
+	font-size:4em;
+	font-weight:bolder;
+	line-height:120%;
+	text-align:center;
+}
+#envelope-words p.b {
+	font-size:7em;
+	font-weight:bolder;
+	color:#F00;
+	text-align:center;
+	line-height:120%;
+}
+#envelope-words p.c {
+	font-size:1.2em;
+	margin-top:20px;
+	line-height:150%;
+}
+#envelope-01 {
+	position: absolute;
+	width:28%;
+	z-index: 1;
+	left:auto;
+	margin-left:62%;
+	top:auto;
+	margin-top:40%;
+}
+#envelope-02 {
+	position: absolute;
+	width:28%;
+	z-index: 10;
+	left:auto;
+	margin-left:62%;
+	top:auto;
+	margin-top:40%;
+}
+#envelope-03 {
+	position: absolute;
+	width:24%;
+	z-index: 5;
+	left:auto;
+	margin-left:64%;
+	animation: Updown 2s infinite alternate;
+	-webkit-animation: Updown 2s alternate infinite;
+}
+
+		}
+
+
+/*平板-2*/
+@media only screen and (max-width:680px) {
+/*----------------------- menu ------------------------*/
+#menu {
+	display:none;
+}
+#m_top_menu {
+	display:block;
+	position:absolute;
+	top:25px;
+	left:90%;
+	z-index:999;
+	width:40px;
+	height:40px;
+	background:#F00 url(images/m_topmenu_bg.png) no-repeat;
+	text-indent:-9999px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:20px;	
+}
+#m_top_menu:hover {
+	background:#000 url(images/m_topmenu_bg.png) no-repeat;
+}
+#top_menu {
+	display:none;
+	width:100px;
+	position:absolute;
+	top:70px;
+	right:0px;
+	border-radius:10px 0 0 10px;
+	background:#FFF;
+	filter: Alpha(Opacity=90);
+	opacity: 0.90;
+	z-index:999;
+}
+#top_menu ul {
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+#top_menu ul li {
+	width:90%;
+	text-align:center;
+	margin-left:5%;
+	padding-top:8px;
+	padding-bottom:8px;
+	list-style:none;
+	clear:both;
+	float:left;
+	border-bottom:1px #999 dotted;
+}
+/*----------------- index --------------------*/
+#index{
+	display:none;
+}
+#index-p{
+	display:block;
+	float:left;
+	width:100%;
+}
+#index-p img{
+	width:100%;
+}
+#btn-go {
+	display:none;
+}
+#btn-index {
+	display:none;
+}
+/*----------------- in --------------------*/
+#banner{
+	display:none;
+}
+#banner-p{
+	display:block;
+	float:left;
+	width:100%;
+}
+#banner-p img{
+	width:100%;
+}
+#btn-in {
+	display:none;
+}
+#game-pad{
+	display:block;
+	width:100%;
+	float:left;
+	height:450px;
+	background:url(images/game-bg-p.jpg);
+	background-position:bottom center;
+	background-color:#FFF;
+}
+#game-prize{
+	width:100%;
+	height:450px;
+	float:left;
+	background:url(images/game-bg-prize.gif);
+	background-position:bottom center;
+	background-repeat:no-repeat;
+	background-color:#fff8e3;
+}
+/*----------------- game --------------------*/
+#draggable {
+	width:16%;
+	float: left;
+	position: absolute;
+	top:60px;
+	z-index: 999;
+	left:20px;
+}
+#droppable-1 {
+	width:23%;
+	float:left;
+	margin-left:15%;
+	margin-top:60%;
+	position:absolute;
+}
+#droppable-2 {
+	width:23%;
+	float:left;
+	margin-left:40%;
+	margin-top:60%;
+	position:absolute;
+}
+#droppable-3 {
+	width:23%;
+	float:left;
+	margin-left:65%;
+	margin-top:60%;
+	position:absolute;
+}
+#box {
+	width:70%;
+	left:auto;
+	right:5%;
+	top:auto;
+	margin-top:27%;
+}
+/*----------------- updown --------------------*/
+#envelope-words {
+	position: absolute;
+	width:50%;
+	z-index: 1;
+	margin-left:8%;
+	margin-top:40%;
+}
+#envelope-words p.a {
+	font-size:3em;
+	font-weight:bolder;
+	line-height:120%;
+	text-align:center;
+}
+#envelope-words p.b {
+	font-size:5em;
+	font-weight:bolder;
+	color:#F00;
+	text-align:center;
+	line-height:120%;
+}
+#envelope-words p.c {
+	font-size:1em;
+	margin-top:20px;
+	line-height:150%;
+}
+#envelope-01 {
+	position: absolute;
+	width:28%;
+	z-index: 1;
+	left:auto;
+	margin-left:62%;
+	top:auto;
+	margin-top:50%;
+}
+#envelope-02 {
+	position: absolute;
+	width:28%;
+	z-index: 10;
+	left:auto;
+	margin-left:62%;
+	top:auto;
+	margin-top:50%;
+}
+		}
+
+
+
+/*手機板*/
+@media only screen and (max-width:570px) {
+#game-pad{
+	display:block;
+	width:100%;
+	float:left;
+	height:500px;
+	background:url(images/game-bg-p.jpg);
+	background-position:bottom center;
+	background-color:#FFF;
+}
+#game-prize{
+	width:100%;
+	height:500px;
+	float:left;
+	background:url(images/game-bg-prize.gif);
+	background-position:bottom center;
+	background-repeat:no-repeat;
+	background-color:#fff8e3;
+}
+/*----------------- game --------------------*/
+#draggable {
+	width:18%;
+	float: left;
+	position: absolute;
+	top:50px;
+	z-index: 999;
+	left:20px;
+}
+#droppable-1 {
+	width:30%;
+	float:left;
+	margin-left:3%;
+	margin-top:90%;
+}
+#droppable-2 {
+	width:30%;
+	float:left;
+	margin-left:35%;
+	margin-top:90%;
+}
+#droppable-3 {
+	width:30%;
+	float:left;
+	margin-left:67%;
+	margin-top:90%;
+}
+#box {
+	width:85%;
+	left:auto;
+	right:5%;
+	top:auto;
+	margin-top:40%;
+}
+/*----------------- updown --------------------*/
+#envelope-words {
+	position: absolute;
+	width:80%;
+	z-index:20;
+	margin-left:8%;
+	margin-top:85%;
+	background:#FFF;
+	padding:10px 10px 10px 10px;
+	border-radius:15px;
+	filter: Alpha(Opacity=80);
+	opacity: 0.80;
+}
+#envelope-words p.a {
+	font-size:3em;
+	font-weight:bolder;
+	line-height:120%;
+	text-align:center;
+}
+#envelope-words p.b {
+	font-size:5em;
+	font-weight:bolder;
+	color:#F00;
+	text-align:center;
+	line-height:120%;
+}
+#envelope-words p.c {
+	font-size:1em;
+	margin-top:20px;
+	line-height:150%;
+}
+#envelope-01 {
+	position: absolute;
+	width:50%;
+	z-index: 1;
+	left:auto;
+	margin-left:30%;
+	top:auto;
+	margin-top:60%;
+}
+#envelope-02 {
+	position: absolute;
+	width:50%;
+	z-index: 10;
+	left:auto;
+	margin-left:30%;
+	top:auto;
+	margin-top:60%;
+}
+#envelope-03 {
+	position: absolute;
+	width:43%;
+	z-index: 5;
+	left:auto;
+	margin-left:32%;
+	animation: Updown 2s infinite alternate;
+	-webkit-animation: Updown 2s alternate infinite;
+}
+		}

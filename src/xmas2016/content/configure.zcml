@@ -1,0 +1,36 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="xmas2016.content">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <includeDependencies package="." />
+
+  <include package=".browser" />
+
+
+  <genericsetup:registerProfile
+      name="default"
+      title="xmas2016.content"
+      directory="profiles/default"
+      description="Installs the xmas2016.content add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="xmas2016.content (uninstall)"
+      directory="profiles/uninstall"
+      description="Uninstalls the xmas2016.content add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.uninstall"
+      />
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="xmas2016.content-hiddenprofiles" />
+
+</configure>
