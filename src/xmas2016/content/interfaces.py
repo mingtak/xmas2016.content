@@ -18,7 +18,47 @@ class IPlayer(Interface):
         required=True,
     )
 
-    description = schema.Text(
-        title=_(u"Description"),
+    player = schema.Text(
+        title=_(u"Players, JSON format"),
         required=False,
+    )
+
+    awarder = schema.Text(
+        title=_(u"Awarder, JSON format"),
+        required=False,
+    )
+
+    awardRate = schema.Float(
+        title=_(u"Award Rate"),
+        default=0.01,
+        required=True,
+    )
+
+    maxAward_100 = schema.Int(
+        title=_(u"Max Award 100"),
+        default=300,
+        required=True,
+    )
+
+    dailyAward_100 = schema.Int(
+        title=_(u"Daily Award 100"),
+        default=10,
+        required=True,
+    )
+
+    maxAward_50 = schema.Int(
+        title=_(u"Max Award 50"),
+        default=1500,
+        required=True,
+    )
+
+    dailyAward_50 = schema.Int(
+        title=_(u"Daily Award 50"),
+        default=50,
+        required=True,
+    )
+
+    hashkey = schema.TextLine(
+        title=_(u"Hash Key"),
+        required=True,
     )

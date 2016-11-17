@@ -18,6 +18,7 @@
       />
 
   <!-- Browser view -->
+
   <browser:page
       name="index_view"
       for="*"
