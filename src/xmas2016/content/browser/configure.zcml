@@ -20,6 +20,13 @@
   <!-- Browser view -->
 
   <browser:page
+      name="award_result"
+      for="*"
+      class=".views.AwardResult"
+      permission="zope2.View"
+      />
+
+  <browser:page
       name="index_view"
       for="*"
       class=".views.IndexView"
