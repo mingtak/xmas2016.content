@@ -18,13 +18,9 @@ class IPlayer(Interface):
         required=True,
     )
 
-    player = schema.Text(
-        title=_(u"Players, JSON format"),
-        required=False,
-    )
-
-    awarder = schema.Text(
-        title=_(u"Awarder, JSON format"),
+    played = schema.Text(
+        title=_(u"Played players, JSON format"),
+        default=u"{}",
         required=False,
     )
 
@@ -46,6 +42,12 @@ class IPlayer(Interface):
         required=True,
     )
 
+    awarder_100 = schema.Text(
+        title=_(u"Awarder 100, JSON format"),
+        default=u"{}",
+        required=False,
+    )
+
     maxAward_50 = schema.Int(
         title=_(u"Max Award 50"),
         default=1500,
@@ -55,6 +57,22 @@ class IPlayer(Interface):
     dailyAward_50 = schema.Int(
         title=_(u"Daily Award 50"),
         default=50,
+        required=True,
+    )
+
+    awarder_50 = schema.Text(
+        title=_(u"Awarder 50, JSON format"),
+        default=u"{}",
+        required=False,
+    )
+
+    dateStart = schema.Date(
+        title=_("Date Start"),
+        required=True,
+    )
+
+    dateEnd = schema.Date(
+        title=_("Date End"),
         required=True,
     )
 

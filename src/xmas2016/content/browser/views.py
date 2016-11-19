@@ -9,6 +9,7 @@ from plone.protect.interfaces import IDisableCSRFProtection
 from zope.interface import alsoProvides
 import hashlib
 import json
+import random
 import logging
 
 logger = logging.getLogger("Xmas2016.content")
@@ -36,8 +37,8 @@ class BaseMethod(BrowserView):
         portal = api.portal.get()
         alsoProvides(request, IDisableCSRFProtection)
 
-        player = json.loads(portal['resource']['player'].player)
-        if order in player:
+        played = json.loads(portal['resource']['player'].played)
+        if order in played:
             return True
         else:
             return False
@@ -117,6 +118,57 @@ class PrizeView(BaseMethod):
         portal = api.portal.get()
         alsoProvides(request, IDisableCSRFProtection)
 
+        sha = request.form.get('sha')
+        order = request.form.get('order')
+
+        self.allowPlay = self.checkPara(sha, order) and not self.alreadyPlayed(order)
+        if not self.allowPlay:
+            request.response.redirect(portal.absolute_url())
+            return
+
+        player = portal['resource']['player']
+        played = json.loads(player.played)
+        awardRate = player.awardRate
+        maxAward_100 = player.maxAward_100
+        dailyAward_100 = player.dailyAward_100
+        awarder_100 = json.loads(player.awarder_100)
+        maxAward_50 = player.maxAward_50
+        dailyAward_50 = player.dailyAward_50
+        awarder_50 = json.loads(player.awarder_50)
+        dateStart = player.dateStart
+        dateEnd = player.dateEnd
+        hashkey = player.hashkey
+
+        pastDay = int(DateTime() - DateTime(dateStart.isoformat()) + 1)
+        quota_100 = True if len(awarder_100) < dailyAward_100 * pastDay else False
+        quota_50 = True if len(awarder_50) < dailyAward_50 * pastDay else False
+
+        if not quota_100 and quota_50:
+            awardRate = 0
+
+        hasAward = random.randrange(1,100) <= awardRate*100
+        if hasAward: # 有中獎
+            if quota_100 and quota_50:
+                self.awardItem = random.choice([100, 50])
+            elif quota_100:
+                self.awardItem = 100
+            else:
+                self.awardItem = 50
+        else:
+            self.awardItem = 0
+
+        playTime = DateTime().strftime('%c')
+        played[order] = playTime
+        player.played = json.dumps(played)
+        if self.awardItem == 50:
+            awarder_50[order] = playTime
+            player.awarder_50 = json.dumps(awarder_50)
+        elif self.awardItem == 100:
+            awarder_100[order] = playTime
+            player.awarder_100 = json.dumps(awarder_100)
+
+#        import pdb; pdb.set_trace()
+
         return self.index()
 
 
@@ -131,4 +183,3 @@ class AwardResult(BaseMethod):
         alsoProvides(request, IDisableCSRFProtection)
 
         return
-

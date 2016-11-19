@@ -25,11 +25,7 @@ $( "#draggable" ).draggable();
 $( "#droppable-1" ).droppable({
    drop: function( event, ui ) {
    alert('太棒了！看看您抽中什麼大獎！');
-   window.location.href = '/prize';
-$( this )
-  .addClass( "ui-state-highlight" )
-  .find( "p" )
-  .html( "Money!" );
+   $('html').load('/@@prize_view?sha=${view/request/form/sha}&order=${view/request/form/order}');
 }
 });
 });
@@ -40,11 +36,7 @@ $( "#draggable" ).draggable();
 $( "#droppable-2" ).droppable({
    drop: function( event, ui ) {
    alert('太棒了！看看您抽中什麼大獎！');
-   window.location.href = '/prize';
-$( this )
-  .addClass( "ui-state-highlight" )
-  .find( "p" )
-  .html( "Good!" );
+   $('html').load('/@@prize_view?sha=${view/request/form/sha}&order=${view/request/form/order}');
 }
 });
 });
@@ -55,11 +47,7 @@ $( "#draggable" ).draggable();
 $( "#droppable-3" ).droppable({
    drop: function( event, ui ) {
    alert('太棒了！看看您抽中什麼大獎！');
-   window.location.href = '/prize';
-$( this )
-  .addClass( "ui-state-highlight" )
-  .find( "p" )
-  .html( "Wulala!" );
+   $('html').load('@@prize_view?sha=${view/request/form/sha}&order=${view/request/form/order}');
 }
 });
 });
