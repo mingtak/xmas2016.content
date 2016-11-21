@@ -183,3 +183,20 @@ class AwardResult(BaseMethod):
         alsoProvides(request, IDisableCSRFProtection)
 
         return
+
+
+class PlayerView(BaseMethod):
+    """ Player View
+    """
+
+    index = ViewPageTemplateFile("template/player_view.pt")
+
+    def __call__(self):
+        context = self.context
+        self.played = json.loads(context.played)
+        self.awarder_100 = json.loads(context.awarder_100)
+        self.awarder_50 = json.loads(context.awarder_50)
+
+
+        return self.index()
+

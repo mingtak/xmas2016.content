@@ -19,6 +19,15 @@
 
   <!-- Browser view -->
 
+
+  <browser:page
+      for="xmas2016.content.interfaces.IPlayer"
+      name="player_view"
+      class=".views.PlayerView"
+      template="template/player_view.pt"
+      permission="cmf.ManagePortal"
+      />
+
   <browser:page
       name="award_result"
       for="*"

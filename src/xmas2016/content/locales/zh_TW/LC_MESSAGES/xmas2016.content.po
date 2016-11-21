@@ -1,6 +1,3 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -15,39 +12,39 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: xmas2016.content\n"
+"Domain: DOMAIN\n"
 
 #: ./interfaces.py:28
 msgid "Award Rate"
-msgstr ""
+msgstr "中獎率"
 
 #: ./interfaces.py:46
 msgid "Awarder 100, JSON format"
-msgstr ""
+msgstr "100元禮券中單名單, 使用 JSON"
 
 #: ./interfaces.py:64
 msgid "Awarder 50, JSON format"
-msgstr ""
+msgstr "50元禮券中單名單, 使用 JSON"
 
 #: ./interfaces.py:40
 msgid "Daily Award 100"
-msgstr ""
+msgstr "100元禮券每天得獎上限"
 
 #: ./interfaces.py:58
 msgid "Daily Award 50"
-msgstr ""
+msgstr "50元禮券每天得獎上限"
 
 #: ./interfaces.py:75
 msgid "Date End"
-msgstr ""
+msgstr "結束日期"
 
 #: ./interfaces.py:70
 msgid "Date Start"
-msgstr ""
+msgstr "開始日期"
 
 #: ./interfaces.py:80
 msgid "Hash Key"
-msgstr ""
+msgstr "約定密碼"
 
 #: ./configure.zcml:21
 msgid "Installs the xmas2016.content add-on."
@@ -55,15 +52,15 @@ msgstr ""
 
 #: ./interfaces.py:34
 msgid "Max Award 100"
-msgstr ""
+msgstr "100元禮券名額"
 
 #: ./interfaces.py:52
 msgid "Max Award 50"
-msgstr ""
+msgstr "50元禮券名額"
 
 #: ./interfaces.py:22
 msgid "Played players, JSON format"
-msgstr ""
+msgstr "已完成遊戲名單, 使用 JSON"
 
 #: ./profiles/default/types/Player.xml
 msgid "Player"
@@ -71,7 +68,7 @@ msgstr ""
 
 #: ./interfaces.py:17
 msgid "Title"
-msgstr ""
+msgstr "標題"
 
 #: ./configure.zcml:30
 msgid "Uninstalls the xmas2016.content add-on."

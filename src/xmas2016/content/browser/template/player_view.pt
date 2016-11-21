@@ -1,0 +1,97 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+<body>
+
+<metal:main fill-slot="content-core">
+<metal:content-core define-macro="content-core">
+
+<?python
+from DateTime import DateTime
+?>
+
+
+
+<h1>系統設定 / 中獎名單</h1>
+
+<h3>系統設定值</h3>
+<ul>
+    <li>中獎率: <span tal:content="context/awardRate" /></li>
+    <li>100元禮券總名額: <span tal:content="context/maxAward_100" /></li>
+    <li>100元禮券每日中獎上限: <span tal:content="context/dailyAward_100" /></li>
+    <li>50元禮券總名額: <span tal:content="context/maxAward_50" /></li>
+    <li>50元禮券每日中獎上限: <span tal:content="context/dailyAward_50" /></li>
+    <li>遊戲起/迄日期: <span tal:content="python:'%s ~ %s' % (context.dateStart.strftime('%Y/%m/%d'), context.dateEnd.strftime('%Y/%m/%d'))" /></li>
+</ul>
+
+<hr>
+
+<h3>100元禮券中獎名單</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <td>訂單編號</td>
+            <td>完成遊戲時間</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr tal:repeat="item view/awarder_100">
+            <td tal:content="item" />
+            <td tal:content="python:view.awarder_100[item]" />
+            <td tal:content="python:DateTime(view.awarder_100[item]).strftime('%Y/%m/%d %H:%M:%S')" />
+        </tr>
+    </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>50元禮券中獎名單</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <td>訂單編號</td>
+            <td>完成遊戲時間</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr tal:repeat="item view/awarder_50">
+            <td tal:content="item" />
+            <td tal:content="python:DateTime(view.awarder_50[item]).strftime('%Y/%m/%d %H:%M:%S')" />
+        </tr>
+    </tbody>
+</table>
+<hr>
+
+<h3>已完成遊戲名單</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <td>訂單編號</td>
+            <td>完成遊戲時間</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr tal:repeat="item view/played">
+            <td tal:content="item" />
+            <td tal:content="python:DateTime(view.played[item]).strftime('%Y/%m/%d %H:%M:%S')" />
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+</metal:content-core>
+</metal:main>
+
+</body>
+</html>
