@@ -53,6 +53,9 @@
     <element value="index_view"/>
     <element value="game_view"/>
     <element value="prize_view"/>
+    <element value="p01"/>
+    <element value="p02"/>
+    <element value="p03"/>
     <element value="document_view"/>
   </property>
 
