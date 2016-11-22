@@ -16,6 +16,27 @@ import urllib2
 logger = logging.getLogger("Xmas2016.content")
 
 
+class P01(BrowserView):
+    index = ViewPageTemplateFile("template/p01.pt")
+
+    def __call__(self):
+        return self.index()
+
+
+class P02(BrowserView):
+    index = ViewPageTemplateFile("template/p02.pt")
+
+    def __call__(self):
+        return self.index()
+
+
+class P03(BrowserView):
+    index = ViewPageTemplateFile("template/p03.pt")
+
+    def __call__(self):
+        return self.index()
+
+
 class BaseMethod(BrowserView):
 
     def paraString(self):
@@ -209,4 +230,3 @@ class PlayerView(BaseMethod):
 
 
         return self.index()
-

@@ -5,7 +5,6 @@
 <title>華得來點數兌換平台-歡樂聖誕大方送</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="web.css" rel="stylesheet" type="text/css" />
-
 <!--控制手機版選單-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="js/mmenu.js"></script>
@@ -40,47 +39,11 @@ function MM_showHideLayers() { //v9.0
     obj.visibility=v; }
 }
 </script>
-<style>
-@keyframes Updown {
-  from {
-    margin-top:35%;
-  }
-  to {
-    margin-top:22%;
-  }
-}
-@-webkit-keyframes Updown {
-  from {
-    margin-top:35%;
-  }
-  to {
-    margin-top:22%;
-  }
-</style>
-<style>
-@media only screen and (max-width:680px) {
-@keyframes Updown {
-  from {
-    margin-top:47%;
-  }
-  to {
-    margin-top:30%;
-  }
-}
-@-webkit-keyframes Updown {
-  from {
-    margin-top:47%;
-  }
-  to {
-    margin-top:30%;
-  }
-}
-</style>
 </head>
 
 <body>
 <div id="all" align="center" >
-<div id="bg-in">
+<div id="bg-in2">
 <div id="wrapper">
 <!--menu-->
 <div id="m_top_menu">手機板選單</div>
@@ -107,33 +70,20 @@ function MM_showHideLayers() { //v9.0
 </ul>
 </div>
 <!--banner end-->
-<!--prize-->
-<div id="game-prize"></div>
-
-<div id="envelope-words">
-<p class="a">恭喜您抽中紅包</p>
-<p class="b">100 元</p>
-<p class="c">獎項全家超商現金抵用券(以電子序號發送兌換)將於確認付款成功後，統一於2017年1月15日以電子序號簡訊發送供兌獎。感謝您的參與！</p>
+<!--content-->
+<div id="in-content">
+<div id="pic"><img src="images/pic-01.png" /></div>
+<div id="words-01">
+  <h3 style="color:#F00;">活動期間華得來會員於華得來點數兌換網站全館成功兌換商品後，即可參加紅包一把抓。</h3>
+  <ul>
+  <li class="s1">於平台兌換商品成功並付款。</li>
+  <li class="s2">出現1次紅包一把抓抽獎機會。</li>
+  <li class="s3">確認中獎訊息(中獎/無中獎) 。</li>
+  <li class="s4">得獎者於106年1月15日收到全家超商現金抵用券(以電子序號發送兌換)就可憑手機簡訊至全家便利商店列印領取，序號需於2個月內106年3月15日前兌換完成！過期不補發。</li>
+  </ul>
+  </div>
 </div>
-<!--<div id="envelope-words">
-<p style="font-size:5em; font-weight:bolder; line-height:120%;">恭喜您抽中紅包</p>
-<p style="font-size:7em; font-weight:bolder; color:#F00; text-align:center; line-height:120%;">50 元</p>
-<p style="font-size:1.4em;margin-top:20px; line-height:150%;">獎項全家超商現金抵用券(以電子序號發送兌換)將於確認付款成功後，統一於2017/1/15以電子序號簡訊發送供兌獎。感謝您的參與！</p>
-</div>-->
-<!--<div id="envelope-words">
-<p style="font-size:3em; font-weight:bolder; line-height:120%; text-align:center;">抱歉，您尚未抽中！</p>
-<p style="font-size:3em; font-weight:bolder; line-height:120%; text-align:center;">感謝您參與本次活動。</p>
-</div>-->
-
-<div id="envelope-02"><img src="images/envelope-cover.png" /></div>
-<div id="envelope-03">
-<img src="images/ticket-100.png" />
-<!--<img src="images/ticket-50.png" />
-<img src="images/ticket-0.png" />-->
-</div>
-
-<div id="envelope-01"><img src="images/envelope-bg.png" /></div>
-<!--prize end-->
+<!--content end-->
 </div>
 </div>
 <!--footer-->

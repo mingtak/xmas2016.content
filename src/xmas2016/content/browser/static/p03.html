@@ -40,47 +40,11 @@ function MM_showHideLayers() { //v9.0
     obj.visibility=v; }
 }
 </script>
-<style>
-@keyframes Updown {
-  from {
-    margin-top:35%;
-  }
-  to {
-    margin-top:22%;
-  }
-}
-@-webkit-keyframes Updown {
-  from {
-    margin-top:35%;
-  }
-  to {
-    margin-top:22%;
-  }
-</style>
-<style>
-@media only screen and (max-width:680px) {
-@keyframes Updown {
-  from {
-    margin-top:47%;
-  }
-  to {
-    margin-top:30%;
-  }
-}
-@-webkit-keyframes Updown {
-  from {
-    margin-top:47%;
-  }
-  to {
-    margin-top:30%;
-  }
-}
-</style>
 </head>
 
 <body>
 <div id="all" align="center" >
-<div id="bg-in">
+<div id="bg-in2">
 <div id="wrapper">
 <!--menu-->
 <div id="m_top_menu">手機板選單</div>
@@ -107,33 +71,27 @@ function MM_showHideLayers() { //v9.0
 </ul>
 </div>
 <!--banner end-->
-<!--prize-->
-<div id="game-prize"></div>
-
-<div id="envelope-words">
-<p class="a">恭喜您抽中紅包</p>
-<p class="b">100 元</p>
-<p class="c">獎項全家超商現金抵用券(以電子序號發送兌換)將於確認付款成功後，統一於2017年1月15日以電子序號簡訊發送供兌獎。感謝您的參與！</p>
+<!--content-->
+<div id="in-content">
+<div id="words-02">
+<h3 style="color:#FFF; background:#F00;">注意事項：</h3>
+<ul>
+<li>參加者請務必留下正確的聯絡資訊，若因手機號碼填寫不正確或不完整，導致無法發送活動獎項，視同放棄得獎資格。</li>
+<li>參加者保證所填寫或提出之資料均為真實且正確，且未冒用或盜用任何第三人之資料。如有不實或不正確之情事，將被取消參加與得獎資格。如因此致無法通知其得獎訊息、或導致獎項遭冒領、遺失者，本網站不負補發獎項責任。</li>
+<li>依中華民國稅法規定，機會中獎之給予價值超過新臺幣1,000元(含)以上者，須申報主管機關並列入得獎會員年度所得，本網站將開立扣繳憑單予得獎會員。得獎會員應配合繳交身分證明文件影本供本網站作為申報依據；若機會中獎之給予價值超過新臺幣20,000元者，須先繳納10%稅金(非中華民國境內居住之個人，依法扣繳20%稅金)，方可領取贈獎。</li>
+<li>本活動之抽獎、中獎與有效交易紀錄，均依本網站電腦系統之紀錄與認定為準。</li>
+<li>本活動獎項以序號兌獎為主，得獎會員不得要求更換其他獎項或折換現金，除獎項發送之費用外，其他衍生之相關費用由得獎會員自行負擔。</li>
+<li>活動獎項序號若發生不可抗拒之原因而造成延後發送或無法發送之情事，本網站有權更換等值獎項，得獎會員不得異議。</li>
+<li>活動獎項發出後，若有序號遺失或被竊等喪失占有之情形，本網站不負補發獎項之責任。參加者同意本網站得於本活動範圍內，進行蒐集、處理及利用個人資料。</li>
+<li>本活動事項載明於活動網頁中，參加本活動者，視為同意接受本活動注意事項之規範。若有違反本活動注意事項之行為，本網站得取消其參加或得獎資格，並對於任何破壞本活動之行為保留相關權利。</li>
+<li>如有任何因網路、電腦、電話、技術等不可歸責於本網站之事由，而使寄送得獎會員之獎品有延遲、遺失、錯誤、無法辨識或毀損之情況，本網站不負任何法律責任，得獎會員亦不得因此而主張任何法律權利。</li>
+<li>本活動如遇例假日或有其他不可抗力之事由者順延之；本網站保有取消、終止、修改或暫停及解釋本活動相關事項之權利，變更後活動時間與內容，將公告於本網站首頁(<a href="https://hnfhc.ielife.net/index.asp" target="_blank">https://hnfhc.ielife.net/index.asp</a>)NEWS或本活動網頁。</li>
+<li>若您對活動內容有任何疑問，請洽往來分行或致電本網站客服(顧客服務專線：華南銀行：(02)2181-0101、華南永昌證券：412-8889、華南產險：(02)2761-6969 / 0800-010850、華南期貨(02)2718-0000）詢問或於網址：<a href="http://hnfhc.ielife.net/index.asp" target="_blank">http://hnfhc.ielife.net/index.asp</a>查詢。</li>
+<li>本活動為網路線上即時抽獎，為維持活動之公平性，參加者如有任何因網路、電腦、電話、技術或封鎖使用權限等其他不可歸責於本網站之事由，致不符合參加本活動之資格，本網站將不再另給抽獎機會。</li>
+</ul>
 </div>
-<!--<div id="envelope-words">
-<p style="font-size:5em; font-weight:bolder; line-height:120%;">恭喜您抽中紅包</p>
-<p style="font-size:7em; font-weight:bolder; color:#F00; text-align:center; line-height:120%;">50 元</p>
-<p style="font-size:1.4em;margin-top:20px; line-height:150%;">獎項全家超商現金抵用券(以電子序號發送兌換)將於確認付款成功後，統一於2017/1/15以電子序號簡訊發送供兌獎。感謝您的參與！</p>
-</div>-->
-<!--<div id="envelope-words">
-<p style="font-size:3em; font-weight:bolder; line-height:120%; text-align:center;">抱歉，您尚未抽中！</p>
-<p style="font-size:3em; font-weight:bolder; line-height:120%; text-align:center;">感謝您參與本次活動。</p>
-</div>-->
-
-<div id="envelope-02"><img src="images/envelope-cover.png" /></div>
-<div id="envelope-03">
-<img src="images/ticket-100.png" />
-<!--<img src="images/ticket-50.png" />
-<img src="images/ticket-0.png" />-->
 </div>
-
-<div id="envelope-01"><img src="images/envelope-bg.png" /></div>
-<!--prize end-->
+<!--content end-->
 </div>
 </div>
 <!--footer-->

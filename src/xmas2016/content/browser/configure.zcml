@@ -56,5 +56,25 @@
       permission="zope2.View"
       />
 
+  <browser:page
+      name="p01"
+      for="*"
+      class=".views.P01"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="p02"
+      for="*"
+      class=".views.P02"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="p03"
+      for="*"
+      class=".views.P03"
+      permission="zope2.View"
+      />
 
 </configure>
