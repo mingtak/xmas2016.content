@@ -30,7 +30,7 @@ from DateTime import DateTime
 
 <hr>
 
-<h3>100元禮券中獎名單</h3>
+<h3>100元禮券中獎名單(已抽走: <span tal:replace="python:len(view.awarder_100)" />)</h3>
 <table class="table">
     <thead>
         <tr>
@@ -51,7 +51,7 @@ from DateTime import DateTime
 
 <hr>
 
-<h3>50元禮券中獎名單</h3>
+<h3>50元禮券中獎名單(已抽走: <span tal:replace="python:len(view.awarder_50)" />)</h3>
 <table class="table">
     <thead>
         <tr>
@@ -68,7 +68,7 @@ from DateTime import DateTime
 </table>
 <hr>
 
-<h3>已完成遊戲名單</h3>
+<h3>已完成遊戲名單(已完成人數: <span tal:replace="python:len(view.played)" />)</h3>
 <table class="table">
     <thead>
         <tr>

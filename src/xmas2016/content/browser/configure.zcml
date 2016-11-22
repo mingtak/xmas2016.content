@@ -25,7 +25,7 @@
       name="player_view"
       class=".views.PlayerView"
       template="template/player_view.pt"
-      permission="cmf.ManagePortal"
+      permission="cmf.ModifyPortalContent"
       />
 
   <browser:page

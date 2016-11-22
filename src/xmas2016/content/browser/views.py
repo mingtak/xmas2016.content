@@ -11,6 +11,7 @@ import hashlib
 import json
 import random
 import logging
+import urllib2
 
 logger = logging.getLogger("Xmas2016.content")
 
@@ -167,7 +168,14 @@ class PrizeView(BaseMethod):
             awarder_100[order] = playTime
             player.awarder_100 = json.dumps(awarder_100)
 
-#        import pdb; pdb.set_trace()
+        callBack = 'http://wonder.ielife.net/Xmas2016-2.asp?sha=%s&order=%s&result=%s' % (sha, order, self.awardItem)
+
+        try:
+            urllib2.urlopen(callBack)
+            logger.info(callBack)
+        except:
+            with open('/home/andyfang51/tmp/holdURL', 'a') as file:
+                file.write('%s\n' % callBack)
 
         return self.index()
 
