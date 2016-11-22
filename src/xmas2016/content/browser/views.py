@@ -159,13 +159,15 @@ class PrizeView(BaseMethod):
             self.awardItem = 0
 
         playTime = DateTime().strftime('%c')
-        played[order] = playTime
+        remoteIP = request.get('HTTP_X_FORWARDED_FOR')
+
+        played[order] = (playTime, remoteIP)
         player.played = json.dumps(played)
         if self.awardItem == 50:
-            awarder_50[order] = playTime
+            awarder_50[order] = (playTime, remoteIP)
             player.awarder_50 = json.dumps(awarder_50)
         elif self.awardItem == 100:
-            awarder_100[order] = playTime
+            awarder_100[order] = (playTime, remoteIP)
             player.awarder_100 = json.dumps(awarder_100)
 
         callBack = 'http://wonder.ielife.net/Xmas2016-2.asp?sha=%s&order=%s&result=%s' % (sha, order, self.awardItem)

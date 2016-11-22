@@ -36,13 +36,14 @@ from DateTime import DateTime
         <tr>
             <td>訂單編號</td>
             <td>完成遊戲時間</td>
+            <td>IP位置</td>
         </tr>
     </thead>
     <tbody>
         <tr tal:repeat="item view/awarder_100">
             <td tal:content="item" />
-            <td tal:content="python:view.awarder_100[item]" />
-            <td tal:content="python:DateTime(view.awarder_100[item]).strftime('%Y/%m/%d %H:%M:%S')" />
+            <td tal:content="python:DateTime(view.awarder_100[item][0]).strftime('%Y/%m/%d %H:%M:%S')"  tal:on-error="nothing"/>
+            <td tal:content="python:view.awarder_100[item][1]" tal:on-error="nothing"/>
         </tr>
     </tbody>
 </table>
@@ -57,12 +58,14 @@ from DateTime import DateTime
         <tr>
             <td>訂單編號</td>
             <td>完成遊戲時間</td>
+            <td>IP位置</td>
         </tr>
     </thead>
     <tbody>
         <tr tal:repeat="item view/awarder_50">
             <td tal:content="item" />
-            <td tal:content="python:DateTime(view.awarder_50[item]).strftime('%Y/%m/%d %H:%M:%S')" />
+            <td tal:content="python:DateTime(view.awarder_50[item][0]).strftime('%Y/%m/%d %H:%M:%S')" tal:on-error="nothing"/>
+            <td tal:content="python:view.awarder_50[item][1]" tal:on-error="nothing"/>
         </tr>
     </tbody>
 </table>
@@ -74,12 +77,14 @@ from DateTime import DateTime
         <tr>
             <td>訂單編號</td>
             <td>完成遊戲時間</td>
+            <td>IP位置</td>
         </tr>
     </thead>
     <tbody>
         <tr tal:repeat="item view/played">
             <td tal:content="item" />
-            <td tal:content="python:DateTime(view.played[item]).strftime('%Y/%m/%d %H:%M:%S')" />
+            <td tal:content="python:DateTime(view.played[item][0]).strftime('%Y/%m/%d %H:%M:%S')"  tal:on-error="nothing"/>
+            <td tal:content="python:view.played[item][1]" tal:on-error="nothing"/>
         </tr>
     </tbody>
 </table>
