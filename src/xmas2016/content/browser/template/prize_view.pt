@@ -117,7 +117,7 @@ function MM_showHideLayers() { //v9.0
 <p class="a" tal:condition="view/awardItem">恭喜您抽中紅包</p>
 <p class="a" tal:condition="not:view/awardItem">太可惜了</p>
 <p class="b">${view/awardItem} 元</p>
-<p class="c" tal:condition="view/awardItem">獎項全家超商現金抵用券(以電子序號發送兌換)將於確認付款成功後，統一於2017/1/15以電子序號簡訊發送供兌獎。感謝您的參與！</p>
+<p class="c" tal:condition="view/awardItem">獎項全家超商現金抵用券(以電子序號發送兌換)將於確認付款成功後，統一於105/1/15以電子序號簡訊發送供兌獎。感謝您的參與！</p>
 <p class="c" tal:condition="not:view/awardItem">無論如何，總要祝福你聖誕快樂^^</p>
 </div>
 <!--<div id="envelope-words">
