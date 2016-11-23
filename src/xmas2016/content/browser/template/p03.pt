@@ -1,3 +1,9 @@
+<?python
+staticPath='/++resource++xmas2016.content'
+filename_01_or_07 = 'index-btn-01.png' if econtext['view'].allowPlay else 'index-btn-07.png'
+filename_01b_or_07b = 'index-btn-01b.png' if econtext['view'].allowPlay else 'index-btn-07b.png'
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -50,7 +56,7 @@ function MM_showHideLayers() { //v9.0
 <div id="m_top_menu">手機板選單</div>
 <div id="top_menu">
 <ul>
-<li><a href="game.html">開始遊戲</</li>
+<li><a href="game.html">開始遊戲</a></li>
 <li><a href="p01.html">活動辦法</a></li>
 <li><a href="p02.html">獎品介紹</a></li>
 <li style="border-bottom:0"><a href="p03.html">注意事項</a></li>
