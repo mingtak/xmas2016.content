@@ -1,7 +1,5 @@
 <?python
 staticPath='/++resource++xmas2016.content'
-filename_01_or_07 = 'index-btn-01.png' if econtext['view'].allowPlay else 'index-btn-07.png'
-filename_01b_or_07b = 'index-btn-01b.png' if econtext['view'].allowPlay else 'index-btn-07b.png'
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -10,11 +8,11 @@ filename_01b_or_07b = 'index-btn-01b.png' if econtext['view'].allowPlay else 'in
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>華得來點數兌換平台-歡樂聖誕大方送</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="web.css" rel="stylesheet" type="text/css" />
+<link href="${staticPath}/web.css" rel="stylesheet" type="text/css" />
 
 <!--控制手機版選單-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="js/mmenu.js"></script>
+<script src="${staticPath}/js/mmenu.js"></script>
 
 <script type="text/javascript">
 function MM_swapImgRestore() { //v3.0
@@ -56,34 +54,34 @@ function MM_showHideLayers() { //v9.0
 <div id="m_top_menu">手機板選單</div>
 <div id="top_menu">
 <ul>
-<li><a href="game.html">開始遊戲</a></li>
-<li><a href="p01.html">活動辦法</a></li>
-<li><a href="p02.html">獎品介紹</a></li>
-<li style="border-bottom:0"><a href="p03.html">注意事項</a></li>
-<!--<li style="border-bottom:0"><a href="p04.html">得獎名單</a></li>-->
+<li><a href="/game">開始遊戲</a></li>
+<li><a href="/p01">活動辦法</a></li>
+<li><a href="/p02">獎品介紹</a></li>
+<li style="border-bottom:0"><a href="/p03">注意事項</a></li>
+<!--<li style="border-bottom:0"><a href="/p04">得獎名單</a></li>-->
 </ul>
 </div>
 <!--menu end-->
 <!--banner-->
-<div id="banner"><a href="index.html"><img src="images/in-banner.png" /></a></div>
-<div id="banner-p"><a href="index.html"><img src="images/in-banner-p.jpg" /></a></div>
+<div id="banner"><a href="/"><img src="${staticPath}/images/in-banner.png" /></a></div>
+<div id="banner-p"><a href="/"><img src="${staticPath}/images/in-banner-p.jpg" /></a></div>
 <div id="btn-in">
 <ul>
-<li><a href="p01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/index-btn-02b.png',1)"><img src="images/index-btn-02.png" id="Image4" /></a></li>
-<li><a href="p02.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/index-btn-03b.png',1)"><img src="images/index-btn-03.png" id="Image5" /></a></li>
-<li><a href="p03.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/index-btn-04b.png',1)"><img src="images/index-btn-04.png" id="Image6" /></a></li>
-<li><a href="game.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/index-btn-05b.png',1)"><img src="images/index-btn-05.png" id="Image7" /></a></li>
-<!--<li><a href="p04.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','images/index-btn-06b.png',1)"><img src="images/index-btn-06.png" id="Image8" /></a></li>-->
+<li><a href="/p01" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','${staticPath}/images/index-btn-02b.png',1)"><img src="${staticPath}/images/index-btn-02.png" id="Image4" /></a></li>
+<li><a href="/p02" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','${staticPath}/images/index-btn-03b.png',1)"><img src="${staticPath}/images/index-btn-03.png" id="Image5" /></a></li>
+<li><a href="/p03" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','${staticPath}/images/index-btn-04b.png',1)"><img src="${staticPath}/images/index-btn-04.png" id="Image6" /></a></li>
+<li><a href="/game" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','${staticPath}/images/index-btn-05b.png',1)"><img src="${staticPath}/images/index-btn-05.png" id="Image7" /></a></li>
+<!--<li><a href="/p04" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','${staticPath}/images/index-btn-06b.png',1)"><img src="${staticPath}/images/index-btn-06.png" id="Image8" /></a></li>-->
 </ul>
 </div>
 <!--banner end-->
 <!--content-->
-<div id="in-content"><div id="pic-2"><img src="images/pic-02.png" /></div>
+<div id="in-content"><div id="pic-2"><img src="${staticPath}/images/pic-02.png" /></div>
 <div id="words-02">
 <h3 style="color:#FFF; background:#F00;">備　註：</h3>
 <ul>
 <li>本活動獎項為全家超商現金抵用券(以電子序號發送兌換)，將於活動結束後，將於106年1月15日發送至中獎者之手機，可憑此序號至全家便利商店換取等值商品，序號需於2個月內106年3月15日前兌換完成！過期不補發。</li>
-<li>得獎手機號碼將於2017年1月10日公告於活動網頁。華得來會員使用點數兌換商品成功後如辦理退貨，即喪失抽獎資格。</li>
+<li>得獎手機號碼將於106年1月10日公告於活動網頁。華得來會員使用點數兌換商品成功後如辦理退貨，即喪失得獎資格。</li>
 <li>本活動參加資格限於華得來點數兌換網站兌換商品成功且未取消訂單之華得來會員。</li>
 </ul>
 </div>
@@ -92,7 +90,7 @@ function MM_showHideLayers() { //v9.0
 </div>
 </div>
 <!--footer-->
-<div id="footer"><img src="images/logo.jpg" /></div>
+<div id="footer"><img src="${staticPath}/images/logo.jpg" /></div>
 <!--footer end-->
 </div>
 </body>

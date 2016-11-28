@@ -90,10 +90,10 @@ function MM_showHideLayers() { //v9.0
 <div id="top_menu">
 <ul>
 <!-- <li><a href="/game">開始遊戲</a></li> -->
-<li><a href="p01.html">活動辦法</a></li>
-<li><a href="p02.html">獎品介紹</a></li>
-<li style="border-bottom:0"><a href="p03.html">注意事項</a></li>
-<!--<li style="border-bottom:0"><a href="p04.html">得獎名單</a></li>-->
+<li><a href="p01">活動辦法</a></li>
+<li><a href="p02">獎品介紹</a></li>
+<li style="border-bottom:0"><a href="p03">注意事項</a></li>
+<!--<li style="border-bottom:0"><a href="p04">得獎名單</a></li>-->
 </ul>
 </div>
 <!--menu end-->
@@ -102,11 +102,11 @@ function MM_showHideLayers() { //v9.0
 <div id="banner-p"><a href="/index"><img src="${staticPath}/images/in-banner-p.jpg" /></a></div>
 <div id="btn-in">
 <ul>
-<li><a href="p01.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','${staticPath}/images/index-btn-02b.png',1)"><img src="${staticPath}/images/index-btn-02.png" id="Image4" /></a></li>
-<li><a href="p02.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','${staticPath}/images/index-btn-03b.png',1)"><img src="${staticPath}/images/index-btn-03.png" id="Image5" /></a></li>
-<li><a href="p03.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','${staticPath}/images/index-btn-04b.png',1)"><img src="${staticPath}/images/index-btn-04.png" id="Image6" /></a></li>
+<li><a href="p01" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','${staticPath}/images/index-btn-02b.png',1)"><img src="${staticPath}/images/index-btn-02.png" id="Image4" /></a></li>
+<li><a href="p02" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','${staticPath}/images/index-btn-03b.png',1)"><img src="${staticPath}/images/index-btn-03.png" id="Image5" /></a></li>
+<li><a href="p03" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','${staticPath}/images/index-btn-04b.png',1)"><img src="${staticPath}/images/index-btn-04.png" id="Image6" /></a></li>
 <!-- <li><a href="/game" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','${staticPath}/images/index-btn-05b.png',1)"><img src="${staticPath}/images/index-btn-05.png" id="Image7" /></a></li> -->
-<!--<li><a href="p04.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','${staticPath}/images/index-btn-06b.png',1)"><img src="${staticPath}/images/index-btn-06.png" id="Image8" /></a></li>-->
+<!--<li><a href="p04" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','${staticPath}/images/index-btn-06b.png',1)"><img src="${staticPath}/images/index-btn-06.png" id="Image8" /></a></li>-->
 </ul>
 </div>
 <!--banner end-->
@@ -117,13 +117,13 @@ function MM_showHideLayers() { //v9.0
 <p class="a" tal:condition="view/awardItem">恭喜您抽中紅包</p>
 <p class="a" tal:condition="not:view/awardItem">太可惜了</p>
 <p class="b">${view/awardItem} 元</p>
-<p class="c" tal:condition="view/awardItem">獎項全家超商現金抵用券(以電子序號發送兌換)將於確認付款成功後，統一於2017年1月15日以電子序號簡訊發送供兌獎。感謝您的參與！</p>
+<p class="c" tal:condition="view/awardItem">得獎者於106年1月15日收到全家超商現金抵用券(以電子序號發送兌換)就可憑手機簡訊至全家便利商店列印領取，序號需於2個月內106年3月15前兌換完成！過期不補發。</p>
 <p class="c" tal:condition="not:view/awardItem">無論如何，總要祝福你聖誕快樂^^</p>
 </div>
 <!--<div id="envelope-words">
 <p style="font-size:5em; font-weight:bolder; line-height:120%;">恭喜您抽中紅包</p>
 <p style="font-size:7em; font-weight:bolder; color:#F00; text-align:center; line-height:120%;">50 元</p>
-<p style="font-size:1.4em;margin-top:20px; line-height:150%;">獎項全家超商現金抵用券(以電子序號發送兌換)將於確認付款成功後，統一於2017年1月15日以電子序號簡訊發送供兌獎。感謝您的參與！</p>
+<p style="font-size:1.4em;margin-top:20px; line-height:150%;">得獎者於106年1月15日收到全家超商現金抵用券(以電子序號發送兌換)就可憑手機簡訊至全家便利商店列印領取，序號需於2個月內106年3月15前兌換完成！過期不補發。</p>
 </div>-->
 <!--<div id="envelope-words">
 <p style="font-size:3em; font-weight:bolder; line-height:120%; text-align:center;">抱歉，您尚未抽中！</p>

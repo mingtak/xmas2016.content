@@ -62,8 +62,8 @@ function MM_showHideLayers() { //v9.0
 </div>
 <!--menu end-->
 <!--banner-->
-<div id="banner"><a href="${staticPath}/index"><img src="${staticPath}/images/in-banner.png" /></a></div>
-<div id="banner-p"><a href="${staticPath}/index"><img src="${staticPath}/images/in-banner-p.jpg" /></a></div>
+<div id="banner"><a href="/"><img src="${staticPath}/images/in-banner.png" /></a></div>
+<div id="banner-p"><a href="/"><img src="${staticPath}/images/in-banner-p.jpg" /></a></div>
 <div id="btn-in">
 <ul>
 <li><a href="/p01" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','${staticPath}/images/index-btn-02b.png',1)"><img src="${staticPath}/images/index-btn-02.png" id="Image4" /></a></li>
