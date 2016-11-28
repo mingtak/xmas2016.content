@@ -100,6 +100,11 @@ class IndexView(BaseMethod):
         sha = request.form.get('sha')
         order = request.form.get('order')
 
+        if sha or order:
+            request.response.setCookie('sha', sha)
+            request.response.setCookie('order', order)
+
+
         self.allowPlay = self.checkPara(sha, order) and not self.alreadyPlayed(order)
 
         return self.index()
@@ -119,6 +124,10 @@ class GameView(BaseMethod):
 
         sha = request.form.get('sha')
         order = request.form.get('order')
+
+        if not sha or not order:
+            sha = request.cookies.get('sha', '')
+            order = request.cookies.get('order', '')
 
         self.allowPlay = self.checkPara(sha, order) and not self.alreadyPlayed(order)
         if not self.allowPlay:
@@ -142,6 +151,11 @@ class PrizeView(BaseMethod):
 
         sha = request.form.get('sha')
         order = request.form.get('order')
+
+        if not sha or not order:
+            sha = request.cookies.get('sha', '')
+            order = request.cookies.get('order', '')
+
 
         self.allowPlay = self.checkPara(sha, order) and not self.alreadyPlayed(order)
         if not self.allowPlay:
@@ -193,12 +207,16 @@ class PrizeView(BaseMethod):
 
         callBack = 'http://wonder.ielife.net/Xmas2016-2.asp?sha=%s&order=%s&result=%s' % (sha, order, self.awardItem)
 
+        # TODO: Timeout
         try:
             urllib2.urlopen(callBack)
             logger.info(callBack)
         except:
             with open('/home/andyfang51/tmp/holdURL', 'a') as file:
                 file.write('%s\n' % callBack)
+
+        request.response.setCookie('sha', '')
+        request.response.setCookie('order', '')
 
         return self.index()
 

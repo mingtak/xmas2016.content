@@ -1,5 +1,5 @@
 <?python
-staticPath='/++resource++xmas2016.content'
+staticPath = '/++resource++xmas2016.content'
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -125,7 +125,7 @@ function MM_showHideLayers() { //v9.0
 <div id="droppable-3"><img src="${staticPath}/images/big-red.png" /></div>
 
 <div id="box">
-<p><strong>遊戲說明：</strong>請移動機器手臂去夾取下方的大紅包，每人每次只能抓一次喔！祝您好運！</p>
+<p><strong>遊戲說明：</strong>請用手指或滑鼠移動機器手臂去夾取下方的大紅包，每人每次只能抓一次喔！</p>
 <p style="text-align:right;"><img src="${staticPath}/images/icon-close.png" onclick="MM_showHideLayers('box','','hide')" /></p>
 </div>
 

@@ -45,6 +45,20 @@ a:hover {
 	font-weight:bolder;
 	line-height: 140%;
 }
+/*----------------- link --------------------*/
+.white-link:visited{
+	font-size:100%;
+	color:#FFF;
+}
+.white-link:link{
+	font-size:100%;
+	color:#FFF;
+}
+.white-link:hover{
+	font-size:100%;
+	color:#CCC;
+	text-decoration:none;
+}
 /*----------------- 最外層包裝 --------------------*/
 #bg-index{
 	width:100%;
@@ -205,9 +219,9 @@ a:hover {
 }
 #box {
 	position: absolute;
-	width: 200px;
+	width: 220px;
 	z-index: 1;
-	left: 774px;
+	left: 764px;
 	top: 212px;
 	border: 1px #CCCCCC solid;
 	border-radius: 15px;
@@ -235,7 +249,7 @@ a:hover {
 	margin-top:30%;
 }
 #envelope-words p.a {
-	font-size:4.5em;
+	font-size:4em;
 	font-weight:bolder;
 	line-height:120%;
 	text-align:center;
@@ -858,7 +872,7 @@ a:hover {
 	width:80%;
 	z-index:20;
 	margin-left:8%;
-	margin-top:85%;
+	margin-top:70%;
 	background:#FFF;
 	padding:10px 10px 10px 10px;
 	border-radius:15px;
@@ -866,13 +880,13 @@ a:hover {
 	opacity: 0.80;
 }
 #envelope-words p.a {
-	font-size:3em;
+	font-size:2.5em;
 	font-weight:bolder;
 	line-height:120%;
 	text-align:center;
 }
 #envelope-words p.b {
-	font-size:5em;
+	font-size:4.5em;
 	font-weight:bolder;
 	color:#F00;
 	text-align:center;

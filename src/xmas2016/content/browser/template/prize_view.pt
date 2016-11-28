@@ -117,7 +117,11 @@ function MM_showHideLayers() { //v9.0
 <p class="a" tal:condition="view/awardItem">恭喜您抽中紅包</p>
 <p class="a" tal:condition="not:view/awardItem">太可惜了</p>
 <p class="b">${view/awardItem} 元</p>
-<p class="c" tal:condition="view/awardItem">得獎者於106年1月15日收到全家超商現金抵用券(以電子序號發送兌換)就可憑手機簡訊至全家便利商店列印領取，序號需於2個月內106年3月15前兌換完成！過期不補發。</p>
+<p class="c">注意事項：<br />
+  得獎者於106年1月15日收到全家超商現金抵用券(以電子序號發送兌換)就可憑手機簡訊至全家便利商店列印領取，序號需於2個月內106年3月15前兌換完成！過期不補發。
+</p>
+<p style="width:100px; padding:5px 5px 5px 5px; background:#F00; border-radius:15px; text-align:center; margin-top:10px;"><a href="http://hnfhc.ielife.net/" target="_blank" class="white-link" >回華得來首頁</a></p>
+
 <p class="c" tal:condition="not:view/awardItem">無論如何，總要祝福你聖誕快樂^^</p>
 </div>
 <!--<div id="envelope-words">
