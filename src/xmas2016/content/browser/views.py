@@ -97,15 +97,18 @@ class IndexView(BaseMethod):
         portal = api.portal.get()
         alsoProvides(request, IDisableCSRFProtection)
 
-        sha = request.form.get('sha')
-        order = request.form.get('order')
+        self.sha = request.form.get('sha')
+        self.order = request.form.get('order')
 
-        if sha or order:
-            request.response.setCookie('sha', sha)
-            request.response.setCookie('order', order)
+        if self.sha and self.order:
+            request.response.setCookie('sha', self.sha)
+            request.response.setCookie('order', self.order)
 
+        if not self.sha and not self.order:
+            self.sha = request.cookies.get('sha', '')
+            self.order = request.cookies.get('order', '')
 
-        self.allowPlay = self.checkPara(sha, order) and not self.alreadyPlayed(order)
+        self.allowPlay = self.checkPara(self.sha, self.order) and not self.alreadyPlayed(self.order)
 
         return self.index()
 
@@ -122,14 +125,14 @@ class GameView(BaseMethod):
         portal = api.portal.get()
         alsoProvides(request, IDisableCSRFProtection)
 
-        sha = request.form.get('sha')
-        order = request.form.get('order')
+#        self.sha = request.form.get('sha')
+#        self.order = request.form.get('order')
 
-        if not sha or not order:
-            sha = request.cookies.get('sha', '')
-            order = request.cookies.get('order', '')
+#        if not self.sha or not self.order:
+        self.sha = request.cookies.get('sha', '')
+        self.order = request.cookies.get('order', '')
 
-        self.allowPlay = self.checkPara(sha, order) and not self.alreadyPlayed(order)
+        self.allowPlay = self.checkPara(self.sha, self.order) and not self.alreadyPlayed(self.order)
         if not self.allowPlay:
             request.response.redirect(portal.absolute_url())
             return
@@ -149,15 +152,15 @@ class PrizeView(BaseMethod):
         portal = api.portal.get()
         alsoProvides(request, IDisableCSRFProtection)
 
-        sha = request.form.get('sha')
-        order = request.form.get('order')
+#        self.sha = request.form.get('sha')
+#        self.order = request.form.get('order')
 
-        if not sha or not order:
-            sha = request.cookies.get('sha', '')
-            order = request.cookies.get('order', '')
+#        if not self.sha or not self.order:
+        self.sha = request.cookies.get('sha', '')
+        self.order = request.cookies.get('order', '')
 
 
-        self.allowPlay = self.checkPara(sha, order) and not self.alreadyPlayed(order)
+        self.allowPlay = self.checkPara(self.sha, self.order) and not self.alreadyPlayed(self.order)
         if not self.allowPlay:
             request.response.redirect(portal.absolute_url())
             return
@@ -179,7 +182,7 @@ class PrizeView(BaseMethod):
         quota_100 = True if len(awarder_100) < dailyAward_100 * pastDay else False
         quota_50 = True if len(awarder_50) < dailyAward_50 * pastDay else False
 
-        if not quota_100 and quota_50:
+        if not quota_100 and not quota_50:
             awardRate = 0
 
         hasAward = random.randrange(1,100) <= awardRate*100
@@ -196,16 +199,16 @@ class PrizeView(BaseMethod):
         playTime = DateTime().strftime('%c')
         remoteIP = request.get('HTTP_X_FORWARDED_FOR')
 
-        played[order] = (playTime, remoteIP)
+        played[self.order] = (playTime, remoteIP)
         player.played = json.dumps(played)
         if self.awardItem == 50:
-            awarder_50[order] = (playTime, remoteIP)
+            awarder_50[self.order] = (playTime, remoteIP)
             player.awarder_50 = json.dumps(awarder_50)
         elif self.awardItem == 100:
-            awarder_100[order] = (playTime, remoteIP)
+            awarder_100[self.order] = (playTime, remoteIP)
             player.awarder_100 = json.dumps(awarder_100)
 
-        callBack = 'http://wonder.ielife.net/Xmas2016-2.asp?sha=%s&order=%s&result=%s' % (sha, order, self.awardItem)
+        callBack = 'http://hnfhc.ielife.net/Xmas2016-2.asp?sha=%s&order=%s&result=%s' % (self.sha, self.order, self.awardItem)
 
         # TODO: Timeout
         try:

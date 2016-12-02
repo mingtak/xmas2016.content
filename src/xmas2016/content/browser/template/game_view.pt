@@ -25,7 +25,7 @@ $( "#draggable" ).draggable();
 $( "#droppable-1" ).droppable({
    drop: function( event, ui ) {
    alert('感謝您參與！請稍等看抽獎結果！');
-   $('html').load('/@@prize_view?sha=${view/request/form/sha}&order=${view/request/form/order}');
+   $('html').load('/@@prize_view?sha=${view/sha}&order=${view/order}');
 }
 });
 });
@@ -36,7 +36,7 @@ $( "#draggable" ).draggable();
 $( "#droppable-2" ).droppable({
    drop: function( event, ui ) {
    alert('感謝您參與！請稍等看抽獎結果！');
-   $('html').load('/@@prize_view?sha=${view/request/form/sha}&order=${view/request/form/order}');
+   $('html').load('/@@prize_view?sha=${view/sha}&order=${view/order}');
 }
 });
 });
@@ -47,7 +47,7 @@ $( "#draggable" ).draggable();
 $( "#droppable-3" ).droppable({
    drop: function( event, ui ) {
    alert('感謝您參與！請稍等看抽獎結果！');
-   $('html').load('@@prize_view?sha=${view/request/form/sha}&order=${view/request/form/order}');
+   $('html').load('@@prize_view?sha=${view/sha}&order=${view/order}');
 }
 });
 });
@@ -136,5 +136,17 @@ function MM_showHideLayers() { //v9.0
 <div id="footer"><img src="${staticPath}/images/logo.jpg" /></div>
 <!--footer end-->
 </div>
+
+<script> 
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ 
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), 
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) 
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); 
+
+ga('create', 'UA-88280344-1', 'auto'); 
+ga('send', 'pageview'); 
+
+</script>
+
 </body>
 </html>
